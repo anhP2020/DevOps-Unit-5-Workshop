@@ -1,3 +1,5 @@
+[![CI workhop](https://github.com/anhP2020/DevOps-Unit-5-Workshop/actions/workflows/workflow.yml/badge.svg)](https://github.com/anhP2020/DevOps-Unit-5-Workshop/actions/workflows/workflow.yml)
+
 # DevOps Unit 5 Workshop
 
 Welcome to the Unit 5 Workshop!
