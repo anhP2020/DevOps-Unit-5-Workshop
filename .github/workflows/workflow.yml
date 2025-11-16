@@ -14,6 +14,33 @@ jobs:
       run: dotnet build
     - name: Run C# Tests
       run: dotnet test
+  Typescript:
+    name: Build and test Typescript
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      # Install Node.js dependencies
+      - name: Install Node.js dependencies
+        run: npm ci
+        working-directory: ./DotnetTemplate.Web
+      # Build TypeScript code
+      - name: Build TypeScript code
+        run: npm run build
+        working-directory: ./DotnetTemplate.Web
+      # Run linter on TypeScript code
+      - name: Run TypeScript linter
+        run: npm run lint
+        working-directory: ./DotnetTemplate.Web
+      # Run TypeScript tests
+      - name: Run TypeScript tests
+        run: npm test
+        working-directory: ./DotnetTemplate.Web
+
       
     
       
